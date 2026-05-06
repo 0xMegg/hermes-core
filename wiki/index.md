@@ -1,0 +1,26 @@
+# Hermes Wiki Index
+
+The wiki contains synthesized, durable knowledge derived from raw sources.
+
+Every durable wiki page must cite its source material.
+
+## Pages
+
+| Page | Purpose | Provenance | Last reviewed |
+| --- | --- | --- | --- |
+| `pages/hermes-operating-model.md` | Final operating model for Hermes setup | `raw/source-manifest.md` | 2026-05-01 |
+| `pages/hermes-rejected-options.md` | Decisions not to re-derive unless revisit conditions fire | `raw/source-manifest.md`, `wiki/pages/hermes-operating-model.md` | 2026-05-01 |
+
+## Active Policy
+
+| Policy | Purpose |
+| --- | --- |
+| `../policy/automation.md` | Change classification and automation boundary |
+| `../policy/promotion.md` | Core/project operating-rule promotion and propagation |
+| `../policy/workflow-profiles.md` | Recommended opt-in workflow profiles |
+| `../policy/codex.md` | Codex operation on this Hermes Core artifact |
+| `../policy/claude-cli.md` | Claude CLI invocation boundary for GUI-launched agent sessions |
+
+## Raw Sources
+
+See `raw/source-manifest.md`.
