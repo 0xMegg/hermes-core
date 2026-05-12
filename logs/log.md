@@ -238,3 +238,23 @@ Verification:
 - Local source search confirmed no prior role-model mapping existed in Hermes Core.
 - Source search confirmed Honbabseoul legacy command frontmatter maps `plan` to Opus, `develop` to Sonnet, and `review` to Opus.
 - Source search confirmed DiveBase active workflow uses Claude for plan/develop and Claude Opus plus Codex final review at close gate.
+
+## 2026-05-11 — Harness Review Policy Discoverability Cleanup
+
+Decision:
+
+- Added `policy/harness-review.md` to the Core `AGENTS.md` fresh-agent read order as an incubating operating-layer peer review boundary.
+- Added `policy/harness-review.md` to `wiki/index.md` Active Policy.
+- Kept `philosophy.md` as inherited source/provenance rather than adding it to read order or Active Policy.
+
+Reason:
+
+- `policy/harness-review.md` already existed and was referenced by Core policy, but fresh agents could miss it when editing operating-layer files.
+- `philosophy.md` explicitly declares itself inherited source, not active operating policy; its active invariants are already extracted into `AGENTS.md`, `SOUL.md`, and `wiki/pages/hermes-operating-model.md`.
+- The cleanup preserves the philosophy boundary: concrete policy is discoverable, long philosophy is not turned into working instructions.
+
+Verification:
+
+- Human gate approved in-session on 2026-05-11.
+- Claude CLI review checked the philosophy/essence boundary and recommended excluding `philosophy.md` from read order while indexing `harness-review.md`.
+- `AGENTS.md` remains 35 lines after the read-order addition.

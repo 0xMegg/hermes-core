@@ -12,9 +12,10 @@ Read order for fresh agents:
 6. `policy/promotion.md` — Core/project rule propagation.
 7. `policy/workflow-profiles.md` — opt-in workflow profiles.
 8. `policy/codex.md` — Codex operation on this Hermes artifact.
-9. `policy/claude-cli.md` — Claude CLI invocation boundary.
-10. `wiki/pages/hermes-operating-model.md` — full model.
-11. `wiki/pages/hermes-rejected-options.md` — decisions not to re-derive.
+9. `policy/harness-review.md` — operating-layer peer review boundary (incubating).
+10. `policy/claude-cli.md` — Claude CLI invocation boundary.
+11. `wiki/pages/hermes-operating-model.md` — full model.
+12. `wiki/pages/hermes-rejected-options.md` — decisions not to re-derive.
 
 Precedence: `AGENTS.md` > `policy/` > `SOUL.md` > `USER.md` > `MEMORY.md` > `wiki/`.
 

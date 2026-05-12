@@ -19,6 +19,7 @@ Every durable wiki page must cite its source material.
 | `../policy/promotion.md` | Core/project operating-rule promotion and propagation |
 | `../policy/workflow-profiles.md` | Recommended opt-in workflow profiles |
 | `../policy/codex.md` | Codex operation on this Hermes Core artifact |
+| `../policy/harness-review.md` | Operating-layer peer review boundary for policy, AGENTS.md, SOUL.md, skills, hooks, adapters, and execution-flow changes (incubating) |
 | `../policy/claude-cli.md` | Claude CLI invocation boundary for GUI-launched agent sessions |
 
 ## Raw Sources

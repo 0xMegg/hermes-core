@@ -20,3 +20,7 @@ Append-only timeline of wiki changes.
 
 - Added active policy reference for `policy/claude-cli.md`.
 - Added active policy reference for local Codex operation policy `policy/codex.md`.
+
+## 2026-05-11
+
+- Added active policy reference for incubating `policy/harness-review.md`.
