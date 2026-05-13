@@ -34,8 +34,10 @@ This policy does not rename Hermes Core, replace `policy/automation.md`, or crea
 - No LLM calls on quiet days.
 - Avoid false positives.
 - Unanchored Discord candidates remain global/unanchored until the user retargets them.
-- Codex proposes.
-- Claude judges when available.
+- Opus plans first.
+- Codex checks the plan and discusses it with Opus.
+- Opus leads implementation when implementation is approved.
+- Codex owns development review, verification review, and closeout.
 - Kamill/Hermes synthesizes in Korean.
 - User decides.
 - Staged proposal only before explicit commit approval.
@@ -77,12 +79,15 @@ After user approval, the approved scope controls the maximum allowed mutation. A
 For Core operating-layer changes, follow the existing review posture:
 
 1. Human gate before active policy, read-order, behavior, ownership, permission, or execution-flow changes.
-2. Codex proposes the scoped change.
-3. Claude judges the proposal or implemented diff when available.
-4. Kamill/Hermes synthesizes the decision and verification result in Korean.
-5. Record important decisions and verification in `logs/log.md`.
+2. Opus drafts the initial plan.
+3. Codex checks the plan against scope, policy, provenance, and verification, then discusses the plan with Opus where needed.
+4. Kamill/Hermes synthesizes the planning result in Korean for the user.
+5. If implementation is explicitly approved, Opus leads implementation within the approved scope.
+6. Codex owns development review, verification review, and closeout before the change is treated as complete.
+7. Kamill/Hermes synthesizes the final decision and verification result in Korean.
+8. Record important decisions and verification in `logs/log.md`.
 
-If Claude is unavailable, times out, or returns no usable output, record the failed review layer under the existing Claude CLI policy instead of silently treating the review as successful.
+If Opus or Codex review is unavailable, times out, or returns no usable output, record the failed review layer under the existing Claude CLI or Codex operating policy instead of silently treating the review as successful.
 
 ## Phase 0 Boundary
 

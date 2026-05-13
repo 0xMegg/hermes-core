@@ -290,3 +290,28 @@ Verification:
 - The policy records the quiet-day no-LLM rule, unanchored Discord rule, staged-proposal-only rule, and no-automatic-mutation boundary.
 - The read-order change is limited to adding `policy/kamill-forge.md`.
 - No watchdog script, cron job, skill, hook, curator change, repo rename, or downstream project change was introduced.
+
+### Decision: Refine Kamill Forge model-role workflow
+
+Decision:
+
+- Updated `policy/kamill-forge.md` and `wiki/pages/kamill-forge-overview.md` so Kamill Forge planning starts with Opus.
+- Codex now explicitly checks and discusses the Opus plan before implementation approval.
+- Opus leads implementation when implementation is explicitly approved.
+- Codex owns development review, verification review, and closeout.
+- Kamill/Hermes continues to synthesize planning and final results in Korean for the user.
+
+Reason:
+
+- The user clarified that Forge workflow should follow an Opus-first planning and implementation split, with Codex as checker/reviewer/closeout owner.
+- This preserves the Phase 0 no-automatic-mutation boundary while making the model-role split explicit.
+
+Review:
+
+- Human gate: approved in-session on 2026-05-13 for the scoped workflow-role update.
+- Claude/Opus final read-only review found no required fixes and accepted the change as a scoped workflow update.
+
+Verification:
+
+- The update is limited to Kamill Forge policy, overview, and this log entry.
+- It does not introduce scripts, cron jobs, skills, hooks, curator changes, repo rename, broad renaming, downstream project changes, or automatic mutation paths.

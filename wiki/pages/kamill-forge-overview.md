@@ -32,11 +32,14 @@ Kamill Forge v0.1 is threshold-primary and conservative:
 1. A candidate appears through repeated experience, a user-originated idea, or an explicit operating-layer observation.
 2. Quiet-day checks are script-only and make no LLM calls when no candidate crosses threshold.
 3. Unanchored Discord candidates remain global/unanchored until the user retargets them to a specific repository or project.
-4. Codex proposes a narrow staged change.
-5. Claude judges the proposal when available.
-6. Kamill/Hermes synthesizes the result for the user in Korean.
-7. The user decides.
-8. No memory, skill, Core, or project mutation happens before explicit approval.
+4. Opus drafts the initial plan.
+5. Codex checks the plan against scope, policy, provenance, and verification, then discusses it with Opus where needed.
+6. Kamill/Hermes synthesizes the planning result for the user in Korean.
+7. The user decides whether implementation may proceed.
+8. If implementation is explicitly approved, Opus leads implementation within the approved scope.
+9. Codex owns development review, verification review, and closeout.
+10. Kamill/Hermes synthesizes the final result for the user in Korean.
+11. No memory, skill, Core, or project mutation happens before explicit approval.
 
 ## Kamill Improvement Lane
 
