@@ -1,0 +1,16 @@
+{
+  "run_id": "above-threshold-unanchored-fixture",
+  "candidates": [
+    {
+      "source_type": "discord_observation",
+      "source_ref": "fixture://above-threshold-unanchored-discord",
+      "anchor_status": "global-unanchored",
+      "repo_path": "/Users/qnb/dev/templates/hermes-core",
+      "lane": "experience-distillation",
+      "observation_count": 3,
+      "summary": "Discord candidate reached threshold but has no confirmed anchor.",
+      "suggested_target": "core-template",
+      "risk_class": "human_gate_required"
+    }
+  ]
+}

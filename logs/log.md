@@ -368,3 +368,31 @@ Verification:
 - Each new wiki page cites `raw/kamill-forge/v0.1-notes.md` and `policy/kamill-forge.md` as provenance.
 - `raw/source-manifest.md` now lists `raw/kamill-forge/v0.1-notes.md` with reverse references from all Kamill Forge wiki pages.
 - `AGENTS.md` read order unchanged.
+
+### Decision: Implement Kamill Forge Phase 1-B minimal script-only watchdog
+
+Decision:
+
+- Added `scripts/kamill_forge_watchdog.py` as a manual `--input <json file>` classifier.
+- Added `tests/test_kamill_forge_watchdog.py` and fixture inputs under `tests/fixtures/kamill_forge_watchdog/`.
+- Updated `wiki/pages/kamill-forge-script-only-watchdog.md` to record the implemented Phase 1-B surface and remaining boundaries.
+- Kept the implementation stdout-only for above-threshold candidates and silent for quiet days.
+
+Reason:
+
+- The user explicitly approved the Phase 1-B minimal script-only watchdog scope after the Phase 1-A proposal.
+- A fixture/manual-input classifier demonstrates the quiet-day and candidate-emission behavior without adding scheduler, hook, skill, curator, ledger, downstream, network, LLM, or automatic mutation surfaces.
+
+Review:
+
+- Claude/Opus was consulted read-only during Phase 1-A and recommended keeping Phase 1-B to a single manual script with inert output and explicit user checkpoints for input source, output path, rule set, candidate shape, and definition of done.
+- Claude/Opus final read-only review returned `NO REQUIRED FIXES` for the implemented Phase 1-B scope.
+- Follow-up Claude/Opus read-only review returned `APPROVED` with no required fixes. Non-blocking documentation suggestions were accepted to clarify the Phase 1-B allowed lane and the internal-only status of the emitted `rule_id` label.
+
+Verification:
+
+- Red phase: `python -m pytest tests/test_kamill_forge_watchdog.py -q` failed because `scripts/kamill_forge_watchdog.py` did not yet exist.
+- Green phase: `python -m pytest tests/test_kamill_forge_watchdog.py -q` passed with 7 tests.
+- `git diff --check` passed.
+- The script reads only explicit JSON input, emits inert JSON only for above-threshold repeated observations, forces global/unanchored Discord candidate `repo_path` to `null`, and does not write output files.
+- No cron job, hook, skill, curator change, memory/user-profile write, automatic Core/project mutation, candidate ledger schema, durable policy threshold, downstream propagation, LLM call, network call, repo rename, or broad Hermes-to-Kamill rename was introduced.

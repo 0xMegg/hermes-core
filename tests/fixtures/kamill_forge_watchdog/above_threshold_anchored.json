@@ -1,0 +1,16 @@
+{
+  "run_id": "above-threshold-anchored-fixture",
+  "candidates": [
+    {
+      "source_type": "session_observation",
+      "source_ref": "fixture://above-threshold-anchored",
+      "anchor_status": "anchored",
+      "repo_path": "/Users/qnb/dev/templates/hermes-core",
+      "lane": "experience-distillation",
+      "observation_count": 3,
+      "summary": "Repeated correction reached the runtime threshold.",
+      "suggested_target": "memory_or_skill",
+      "risk_class": "human_gate_required"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "run_id": "malformed-fixture",
+  "candidates": [
+    {
+      "source_type": "session_observation",
+      "source_ref": "fixture://malformed"
+    }
+  ]
+}
