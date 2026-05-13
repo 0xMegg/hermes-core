@@ -336,3 +336,35 @@ Verification:
 
 - The change is limited to raw provenance and this log entry.
 - It does not change active policy, read order, wiki synthesis, scripts, cron jobs, skills, hooks, curator behavior, repo name, broad naming, downstream projects, or automatic mutation paths.
+
+### Decision: Add Kamill Forge Phase 0 documentation bundle (round 2)
+
+Decision:
+
+- Updated `policy/kamill-forge.md` Phase 0 Boundary to a Phase Boundaries section that states Phase 0 has no watchdog script artifact and that Phase 1 requires explicit scoped approval.
+- Added `raw/kamill-forge/v0.1-notes.md` as a local source entry in `raw/source-manifest.md`.
+- Added `wiki/pages/kamill-forge-staged-proposal-format.md`.
+- Added `wiki/pages/kamill-forge-discord-anchoring.md`.
+- Added `wiki/pages/kamill-forge-script-only-watchdog.md` as a Phase 0 design plan, not an executable specification.
+- Indexed the three new pages in `wiki/index.md` and logged them in `wiki/log.md`.
+- Did not change `README.md` reusable scaffolding, `AGENTS.md` read order, or any downstream project file.
+
+Reason:
+
+- Phase 0 source notes and policy already implied the three concepts: staged proposal format, unanchored Discord handling, and script-only watchdog behavior. They had no durable wiki home or shared provenance back-reference.
+- The source manifest had no entry for the Kamill Forge v0.1 notes despite the policy and overview citing them as provenance.
+- The Phase 0 and Phase 1 boundary was implicit. Making Phase 1 approval explicit prevents drift from design documentation into executable scaffolding.
+
+Review:
+
+- Human gate: approved in-session on 2026-05-13 after read-only Kamill Forge v0.1 review.
+- Opus led the implementation plan within the approved scope.
+- Codex performs development review, verification review, and closeout per `policy/kamill-forge.md`.
+
+Verification:
+
+- No watchdog script artifact, cron job, skill, hook, or curator change introduced.
+- No repository rename, broad Hermes-to-Kamill renaming, or downstream project change introduced.
+- Each new wiki page cites `raw/kamill-forge/v0.1-notes.md` and `policy/kamill-forge.md` as provenance.
+- `raw/source-manifest.md` now lists `raw/kamill-forge/v0.1-notes.md` with reverse references from all Kamill Forge wiki pages.
+- `AGENTS.md` read order unchanged.

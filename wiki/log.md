@@ -29,3 +29,6 @@ Append-only timeline of wiki changes.
 
 - Added `pages/kamill-forge-overview.md` as the Kamill Forge v0.1 governance-layer overview.
 - Added active policy reference for `policy/kamill-forge.md`.
+- Added `pages/kamill-forge-staged-proposal-format.md` describing the staged proposal format and lifecycle.
+- Added `pages/kamill-forge-discord-anchoring.md` describing unanchored Discord candidate handling and retargeting.
+- Added `pages/kamill-forge-script-only-watchdog.md` describing the Phase 0 design plan for the script-only quiet-day watchdog; no script artifact was added.

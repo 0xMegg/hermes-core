@@ -11,6 +11,9 @@ Every durable wiki page must cite its source material.
 | `pages/hermes-operating-model.md` | Final operating model for Hermes setup | `raw/source-manifest.md` | 2026-05-01 |
 | `pages/hermes-rejected-options.md` | Decisions not to re-derive unless revisit conditions fire | `raw/source-manifest.md`, `wiki/pages/hermes-operating-model.md` | 2026-05-01 |
 | `pages/kamill-forge-overview.md` | Kamill Forge v0.1 governance-layer overview | `raw/kamill-forge/v0.1-notes.md` | 2026-05-13 |
+| `pages/kamill-forge-staged-proposal-format.md` | Kamill Forge staged proposal format and lifecycle | `raw/kamill-forge/v0.1-notes.md`, `policy/kamill-forge.md` | 2026-05-13 |
+| `pages/kamill-forge-discord-anchoring.md` | Unanchored Discord candidate handling and retargeting | `raw/kamill-forge/v0.1-notes.md`, `policy/kamill-forge.md` | 2026-05-13 |
+| `pages/kamill-forge-script-only-watchdog.md` | Phase 0 design plan for the script-only quiet-day watchdog | `raw/kamill-forge/v0.1-notes.md`, `policy/kamill-forge.md` | 2026-05-13 |
 
 ## Active Policy
 

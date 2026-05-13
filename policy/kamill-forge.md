@@ -89,9 +89,17 @@ For Core operating-layer changes, follow the existing review posture:
 
 If Opus or Codex review is unavailable, times out, or returns no usable output, record the failed review layer under the existing Claude CLI or Codex operating policy instead of silently treating the review as successful.
 
-## Phase 0 Boundary
+## Phase Boundaries
 
-Phase 0 is documentation and paper-run only. It may add this policy, raw source notes, a wiki overview, index entries, read-order routing, and a log entry. It must not add watchdog scripts, cron jobs, skills, hooks, curator changes, or automatic mutation paths.
+### Phase 0
+
+Phase 0 is documentation and paper-run only. It may add this policy, raw source notes, wiki pages describing the design, index entries, read-order routing, and log entries.
+
+Phase 0 must not produce a watchdog script artifact, cron job, skill, hook, curator change, or any automatic mutation path. Wiki descriptions of a future watchdog are design documents, not executable specifications.
+
+### Phase 1 and Later
+
+No Phase 1 work begins until the user explicitly approves a scoped Phase 1 plan. The approved scope controls the maximum allowed change. A Phase 0 wiki description does not authorize the corresponding Phase 1 artifact, and a narrow Phase 1 approval does not authorize broader scaffolding, automation, or downstream propagation.
 
 ## Acceptance Question
 

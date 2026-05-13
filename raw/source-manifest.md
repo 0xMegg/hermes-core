@@ -47,3 +47,8 @@ Each source should identify:
    - Role: auto-apply, human-gate, and block boundaries.
    - Reviewed: 2026-05-01
    - Used by: `policy/automation.md`, `wiki/pages/hermes-operating-model.md`, `wiki/pages/hermes-rejected-options.md`
+
+3. `raw/kamill-forge/v0.1-notes.md`
+   - Role: user-approved naming, scope, v0.1 defaults, and workflow-role clarification for the Kamill Forge governance layer.
+   - Collected: 2026-05-13
+   - Used by: `policy/kamill-forge.md`, `wiki/pages/kamill-forge-overview.md`, `wiki/pages/kamill-forge-staged-proposal-format.md`, `wiki/pages/kamill-forge-discord-anchoring.md`, `wiki/pages/kamill-forge-script-only-watchdog.md`
