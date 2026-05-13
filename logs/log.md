@@ -315,3 +315,24 @@ Verification:
 
 - The update is limited to Kamill Forge policy, overview, and this log entry.
 - It does not introduce scripts, cron jobs, skills, hooks, curator changes, repo rename, broad renaming, downstream project changes, or automatic mutation paths.
+
+### Decision: Add Kamill Forge role clarification to raw provenance
+
+Decision:
+
+- Appended a workflow-role clarification to `raw/kamill-forge/v0.1-notes.md`.
+- Recorded that the Opus-first planning, Codex plan check/discussion, Opus implementation, and Codex review/closeout split supersedes the earlier shorthand "Codex proposes / Claude judges" wording for active Kamill Forge workflow.
+
+Reason:
+
+- The active policy and overview already reflected the clarified workflow, but the raw source notes still contained the earlier shorthand.
+- Adding an append-only clarification preserves the original source record while making the current provenance chain explicit.
+
+Review:
+
+- Human gate: approved in-session on 2026-05-13 for the scoped raw-provenance addendum.
+
+Verification:
+
+- The change is limited to raw provenance and this log entry.
+- It does not change active policy, read order, wiki synthesis, scripts, cron jobs, skills, hooks, curator behavior, repo name, broad naming, downstream projects, or automatic mutation paths.
