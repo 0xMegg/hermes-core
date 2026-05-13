@@ -24,3 +24,8 @@ Append-only timeline of wiki changes.
 ## 2026-05-11
 
 - Added active policy reference for incubating `policy/harness-review.md`.
+
+## 2026-05-13
+
+- Added `pages/kamill-forge-overview.md` as the Kamill Forge v0.1 governance-layer overview.
+- Added active policy reference for `policy/kamill-forge.md`.

@@ -258,3 +258,35 @@ Verification:
 - Human gate approved in-session on 2026-05-11.
 - Claude CLI review checked the philosophy/essence boundary and recommended excluding `philosophy.md` from read order while indexing `harness-review.md`.
 - `AGENTS.md` remains 35 lines after the read-order addition.
+
+## 2026-05-13 — Kamill Forge Phase 0 Governance Layer
+
+Decision:
+
+- Kept `hermes-core` as the repository and operating-layer template name.
+- Introduced Kamill Forge as the named governance layer for Hermes experience distillation, not as a replacement repository or parallel automatic learning system.
+- Added `raw/kamill-forge/v0.1-notes.md` as the source record for the user-approved v0.1 defaults.
+- Added `wiki/pages/kamill-forge-overview.md` as the durable design overview.
+- Added `policy/kamill-forge.md` as the Phase 0 governance boundary.
+- Added `policy/kamill-forge.md` to `AGENTS.md` read order and `wiki/index.md` Active Policy.
+- Added `wiki/pages/kamill-forge-overview.md` to `wiki/index.md` Pages.
+
+Reason:
+
+- The user approved the name Kamill Forge for the Hermes Experience Distillation Loop / governance layer.
+- The layer governs existing Hermes mechanisms: memory, skills, session_search, and curator.
+- Phase 0 is intentionally paper-run only: no repo rename, no broad Hermes-to-Kamill rename, no scripts, no skills, no cron jobs, no hooks, no curator changes, and no automatic memory, Core, or project mutation.
+- Keeping `hermes-core` as the repo/template name preserves historical references, downstream template usage, and the distinction between Hermes Core and the Kamill Forge governance layer.
+
+Review:
+
+- Human gate: approved in-session on 2026-05-13 for the Phase 0 documentation bundle.
+- Claude/Opus was consulted before implementation and recommended keeping `hermes-core` as the repo/template name while introducing Kamill Forge as a governance-layer name.
+- Claude/Opus final read-only review found no required fixes and accepted the change as Phase 0. One non-blocking wording-drift note was addressed by making `policy/kamill-forge.md` mirror the source wording "Avoid false positives."
+
+Verification:
+
+- The wiki overview cites `raw/kamill-forge/v0.1-notes.md` as provenance.
+- The policy records the quiet-day no-LLM rule, unanchored Discord rule, staged-proposal-only rule, and no-automatic-mutation boundary.
+- The read-order change is limited to adding `policy/kamill-forge.md`.
+- No watchdog script, cron job, skill, hook, curator change, repo rename, or downstream project change was introduced.
