@@ -32,3 +32,8 @@ Append-only timeline of wiki changes.
 - Added `pages/kamill-forge-staged-proposal-format.md` describing the staged proposal format and lifecycle.
 - Added `pages/kamill-forge-discord-anchoring.md` describing unanchored Discord candidate handling and retargeting.
 - Added `pages/kamill-forge-script-only-watchdog.md` describing the Phase 0 design plan for the script-only quiet-day watchdog; no script artifact was added.
+
+## 2026-05-14
+
+- Updated `pages/kamill-forge-script-only-watchdog.md` to record the approved Phase 1-C manual dry-run candidate ledger and staged proposal draft generator boundary.
+- Updated `wiki/index.md` review metadata for the Kamill Forge watchdog page.

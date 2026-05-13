@@ -396,3 +396,50 @@ Verification:
 - `git diff --check` passed.
 - The script reads only explicit JSON input, emits inert JSON only for above-threshold repeated observations, forces global/unanchored Discord candidate `repo_path` to `null`, and does not write output files.
 - No cron job, hook, skill, curator change, memory/user-profile write, automatic Core/project mutation, candidate ledger schema, durable policy threshold, downstream propagation, LLM call, network call, repo rename, or broad Hermes-to-Kamill rename was introduced.
+
+## 2026-05-14
+
+### Run note: Discord `/thread` message did not become a full thread instruction
+
+Observation:
+
+- A Discord `/thread` command was used to create a `hermes-core` thread with an initial instruction block containing the repo path, operating-layer scope, policy/workflow edit boundary, secret-handling boundary, and Korean reply preference.
+- In the active Hermes session context, the thread title showed only a truncated suffix: `hermes-core · Kamill Forge Phase 1-C proposal: candidate ledger +`.
+- The instruction block did not appear to be promoted as a strong per-thread agent instruction; it had to be restated in-thread and explicitly acknowledged.
+
+Interpretation:
+
+- The `/thread` command appears to use `task` or `message` content as title/initial-message material, with deterministic truncation for the Discord thread title.
+- Title derivation and agent-session instruction injection are separate concerns. The observed behavior suggests that long thread command content can partially appear in the title without becoming full Hermes operating context.
+
+Boundary:
+
+- This entry records the incident only. It does not change gateway behavior, thread presets, policy, workflow, scripts, hooks, cron jobs, skills, curator behavior, or downstream project files.
+- Any fix to `/thread` title generation or thread-instruction injection requires separate scoped approval because it may affect gateway/workflow behavior.
+
+Verification:
+
+- Recorded as a log-only note in `logs/log.md` after reading `AGENTS.md` and `policy/automation.md`.
+
+### Approved implementation: Kamill Forge Phase 1-C manual dry-run ledger and proposal draft generator
+
+Scope:
+
+- User approved Phase 1-C as candidate ledger plus staged proposal draft generator.
+- Runtime behavior remains manual dry-run only: no cron, hooks, memory writes, skill writes, automatic Core/project mutation, curator integration, downstream propagation, network calls, or LLM calls.
+
+Implemented files:
+
+- `scripts/kamill_forge_ledger.py` normalizes explicit candidate JSON or Phase 1-B payloads, prints dry-run ledger records by default, and appends JSONL only with explicit `--ledger-out` under `logs/kamill-forge/dry-runs/` or test temp paths.
+- `scripts/kamill_forge_proposal_draft.py` renders one explicit candidate as a staged-draft markdown proposal, prints stdout by default, and writes only with explicit `--out` under `logs/kamill-forge/dry-runs/staged-proposals/` or test temp paths.
+- Added targeted tests for stdout-only defaults, explicit dry-run file output, fail-closed malformed input, unanchored Discord `repo_path: null`, output path restrictions, and no forbidden network/LLM terms.
+- Updated `wiki/pages/kamill-forge-script-only-watchdog.md`, `wiki/index.md`, and `wiki/log.md` to record the Phase 1-C boundary.
+
+Verification:
+
+- `python -m pytest tests/test_kamill_forge_watchdog.py tests/test_kamill_forge_ledger.py tests/test_kamill_forge_proposal_draft.py -q` passed with 19 tests.
+- `git diff --check` passed.
+- Manual staged proposal stdout check confirmed `Status: staged-draft`, `Decision: pending`, `Implemented: no`, `Verified: no`, and `Log updated: no`.
+- Static forbidden-term check confirmed both Phase 1-C scripts contain no `requests`, `urllib.request`, `http.client`, `socket`, `openai`, `anthropic`, `claude`, or `hermes chat` terms.
+- Claude/Opus read-only review returned `NO REQUIRED FIXES` for manual dry-run scope, output-path restrictions, stdout-only defaults, no network/LLM calls, no cron/hooks, and staged-draft pending-only behavior.
+- No dry-run ledger or staged proposal runtime output files were left under `logs/kamill-forge/dry-runs/`.

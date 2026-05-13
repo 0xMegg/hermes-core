@@ -91,6 +91,16 @@ Phase 1-B is a minimal manual script implementation only. It does not authorize 
 
 Any Phase 1-C/Phase 2 consumer, ledger, scheduler, hook, skill, curator, or downstream behavior requires a new explicit scoped approval under `policy/kamill-forge.md` Phase Boundaries.
 
+## Phase 1-C Implemented Surface
+
+Phase 1-C adds manual dry-run tooling for candidate review only:
+
+- `scripts/kamill_forge_ledger.py` — normalizes an explicit candidate JSON or Phase 1-B payload, prints dry-run ledger records by default, and appends JSONL only when `--ledger-out` is explicitly provided.
+- `scripts/kamill_forge_proposal_draft.py` — renders a staged proposal draft from one explicit candidate JSON, prints markdown by default, and writes a draft file only when `--out` is explicitly provided.
+- `tests/test_kamill_forge_ledger.py` and `tests/test_kamill_forge_proposal_draft.py` — verify stdout-only defaults, explicit dry-run file output, malformed-input fail-closed behavior, unanchored Discord `repo_path: null`, output path restrictions, and absence of network/LLM import terms.
+
+The runtime write boundary is limited to explicit dry-run output paths under `logs/kamill-forge/dry-runs/` and test temp paths. The scripts do not schedule themselves, install hooks, call networks or LLMs, write memory or skills, update Core policy/wiki/log files at runtime, mutate projects, or promote staged drafts into approved changes.
+
 ## Verification Expectation for Phase 1
 
 When Phase 1 is explicitly approved, the implementation should demonstrate:

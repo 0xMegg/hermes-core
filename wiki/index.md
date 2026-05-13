@@ -13,7 +13,7 @@ Every durable wiki page must cite its source material.
 | `pages/kamill-forge-overview.md` | Kamill Forge v0.1 governance-layer overview | `raw/kamill-forge/v0.1-notes.md` | 2026-05-13 |
 | `pages/kamill-forge-staged-proposal-format.md` | Kamill Forge staged proposal format and lifecycle | `raw/kamill-forge/v0.1-notes.md`, `policy/kamill-forge.md` | 2026-05-13 |
 | `pages/kamill-forge-discord-anchoring.md` | Unanchored Discord candidate handling and retargeting | `raw/kamill-forge/v0.1-notes.md`, `policy/kamill-forge.md` | 2026-05-13 |
-| `pages/kamill-forge-script-only-watchdog.md` | Phase 0 design plan for the script-only quiet-day watchdog | `raw/kamill-forge/v0.1-notes.md`, `policy/kamill-forge.md` | 2026-05-13 |
+| `pages/kamill-forge-script-only-watchdog.md` | Phase 1-B watchdog and Phase 1-C manual dry-run ledger/proposal-draft boundaries | `raw/kamill-forge/v0.1-notes.md`, `policy/kamill-forge.md` | 2026-05-14 |
 
 ## Active Policy
 
