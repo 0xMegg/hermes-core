@@ -443,3 +443,23 @@ Verification:
 - Static forbidden-term check confirmed both Phase 1-C scripts contain no `requests`, `urllib.request`, `http.client`, `socket`, `openai`, `anthropic`, `claude`, or `hermes chat` terms.
 - Claude/Opus read-only review returned `NO REQUIRED FIXES` for manual dry-run scope, output-path restrictions, stdout-only defaults, no network/LLM calls, no cron/hooks, and staged-draft pending-only behavior.
 - No dry-run ledger or staged proposal runtime output files were left under `logs/kamill-forge/dry-runs/`.
+
+### Closeout: Mark Kamill Forge v0.1 as complete manual workflow
+
+Decision:
+
+- Recorded the user's clarification that, excluding natural improvement from accumulated observations, Kamill Forge v0.1 is complete once the manual safe loop is reflected in workflow documentation and the repository is clean.
+- Updated `raw/kamill-forge/v0.1-notes.md`, `policy/kamill-forge.md`, `wiki/pages/kamill-forge-overview.md`, `wiki/index.md`, and `wiki/log.md` to distinguish the completed v0.1 manual loop from future automation phases.
+- Added repository hygiene ignores for session-local planning artifacts, pytest cache, Python bytecode, and dry-run runtime output directories.
+
+Boundary:
+
+- This closeout does not add session scanning, cron, hooks, memory writes, skill writes, curator integration, automatic Core/project mutation, downstream propagation, durable threshold policy, or automatic proposal promotion.
+- Future improvements remain staged-proposal driven and require explicit scoped approval before mutation.
+
+Verification:
+
+- `python -m pytest tests/test_kamill_forge_watchdog.py tests/test_kamill_forge_ledger.py tests/test_kamill_forge_proposal_draft.py -q` passed with 19 tests.
+- `git diff --check` passed.
+- Dirty-state cleanup verified no tracked or untracked transient files except the intended `.gitignore` before commit.
+- Remote sync verification is performed after commit/push during closeout.

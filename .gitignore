@@ -1,0 +1,10 @@
+# Session-local planning artifacts
+.hermes/plans/
+
+# Test/runtime caches
+.pytest_cache/
+__pycache__/
+*.py[cod]
+
+# Kamill Forge dry-run runtime outputs are not source artifacts.
+logs/kamill-forge/dry-runs/

@@ -1,6 +1,6 @@
 # Kamill Forge Policy
 
-Status: Phase 0 active governance boundary for Kamill Forge v0.1.
+Status: v0.1 complete active governance boundary for the manual, safe, dry-run-first Kamill Forge loop.
 
 Kamill Forge is the governance layer for Hermes experience distillation. It governs proposals that may affect Hermes memory, skills, session recall, curator behavior, Core operating artifacts, or downstream project operating layers.
 
@@ -42,6 +42,21 @@ This policy does not rename Hermes Core, replace `policy/automation.md`, or crea
 - User decides.
 - Staged proposal only before explicit commit approval.
 - No automatic memory, skill, Core, or project modifications without explicit approval.
+
+## v0.1 Completion State
+
+Kamill Forge v0.1 is complete as a manual governance loop:
+
+1. Repeated experience, user-originated improvement ideas, or explicit operating-layer observations may become candidates.
+2. Quiet-day checks stay script-only, silent, and non-mutating.
+3. Explicit above-threshold candidates may be normalized into dry-run ledger records.
+4. One explicit candidate may be rendered into a staged proposal draft.
+5. The user decides whether any staged change may be implemented.
+6. Approved changes are implemented only within the approved scope and closed out with verification and repository hygiene.
+
+Natural improvement is expected to come from accumulated observations and future staged proposals, not from automatic mutation.
+
+Completion does not authorize automatic session scanning, cron scheduling, hooks, memory or skill writes, curator integration, Core/project mutation, or downstream propagation. Each remains a separate scoped phase requiring explicit approval.
 
 ## Candidate Lanes
 
@@ -99,7 +114,7 @@ Phase 0 must not produce a watchdog script artifact, cron job, skill, hook, cura
 
 ### Phase 1 and Later
 
-No Phase 1 work begins until the user explicitly approves a scoped Phase 1 plan. The approved scope controls the maximum allowed change. A Phase 0 wiki description does not authorize the corresponding Phase 1 artifact, and a narrow Phase 1 approval does not authorize broader scaffolding, automation, or downstream propagation.
+Phase 1-B and Phase 1-C were approved and implemented as manual, dry-run-only tooling. Any additional Phase 1 or later work requires a new explicit scoped plan. The approved scope controls the maximum allowed change. A prior wiki description or narrow Phase 1 approval does not authorize broader scaffolding, automation, or downstream propagation.
 
 ## Acceptance Question
 

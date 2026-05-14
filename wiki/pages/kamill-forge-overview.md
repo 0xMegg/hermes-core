@@ -41,6 +41,18 @@ Kamill Forge v0.1 is threshold-primary and conservative:
 10. Kamill/Hermes synthesizes the final result for the user in Korean.
 11. No memory, skill, Core, or project mutation happens before explicit approval.
 
+## v0.1 Completion State
+
+Kamill Forge v0.1 is complete as a manual, safe, dry-run-first governance loop. Its completed surface is:
+
+- script-only quiet-day classification with no LLM calls and no mutation;
+- manual explicit-input candidate classification;
+- dry-run ledger normalization for explicit candidates;
+- staged proposal draft rendering for one explicit candidate;
+- user approval before any memory, skill, Core, project, curator, cron, hook, or downstream change.
+
+Future improvement should happen naturally through accumulated observations and separately approved staged proposals. v0.1 completion does not authorize automatic session scanning, scheduled execution, memory or skill writes, curator integration, Core/project mutation, or downstream propagation.
+
 ## Kamill Improvement Lane
 
 User-originated Kamill or Hermes improvement ideas use the same governance flow, but they are tracked as a distinct Kamill Improvement Lane. This keeps direct improvement requests visible without allowing them to bypass the same staged proposal, review, and approval gates.
@@ -49,10 +61,12 @@ User-originated Kamill or Hermes improvement ideas use the same governance flow,
 
 A quiet day is a day with no candidate above threshold and no explicit user request to run a Kamill Forge improvement cycle. In that case, v0.1 should perform only script-level checks and exit without calling an LLM or mutating Hermes state.
 
-## Phase 0 Boundary
+## Implemented Phase Boundary
 
-Phase 0 introduces the design and policy boundary only. It does not add watchdog scripts, cron jobs, skills, hooks, curator changes, or automatic mutation paths.
+Phase 0 introduced the design and policy boundary. Phase 1-B added the minimal manual watchdog classifier. Phase 1-C added manual dry-run ledger and staged proposal draft tooling. The implemented v0.1 surface remains manual and non-promotional.
+
+Any automatic session ingestion, ledger consumer, cron job, hook, skill, curator integration, memory or project mutation, downstream propagation, durable threshold policy, or runtime promotion path is outside v0.1 and requires a new explicit scoped approval.
 
 ## Naming Boundary
 
-`hermes-core` should remain the repository and template name during Phase 0. Kamill Forge should be used for the governance layer. A repository or project rename would be a separate high-blast-radius decision because it could break historical references, downstream template usage, fresh-agent read order, and provenance trails.
+`hermes-core` remains the repository and template name. Kamill Forge names the governance layer. A repository or project rename would be a separate high-blast-radius decision because it could break historical references, downstream template usage, fresh-agent read order, and provenance trails.

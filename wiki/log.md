@@ -37,3 +37,4 @@ Append-only timeline of wiki changes.
 
 - Updated `pages/kamill-forge-script-only-watchdog.md` to record the approved Phase 1-C manual dry-run candidate ledger and staged proposal draft generator boundary.
 - Updated `wiki/index.md` review metadata for the Kamill Forge watchdog page.
+- Updated `pages/kamill-forge-overview.md` and `wiki/index.md` to mark v0.1 as a complete manual, safe, dry-run-first governance loop while keeping future automation blocked behind separate approval.
